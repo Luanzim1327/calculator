@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="time" id="time">
+            <span id="hour">
+                13 :
+            </span>
+            <span id="min">30</span>
+        </div>
+
+        <div class="results-screen">
+            <h2 class="screen-calc" id="result"></h2>
+        </div>
+        <table>
+            <tr>
+                <th class="operator" onclick="clean()">C</th>
+                <th colspan="2" class="operator" onclick="deleteCalculation()"><i class="fa-sharp fa-solid fa-delete-left"></i></th>
+                <th class="operator" onclick="insert('/')"><i class="fa-solid fa-divide"></i></th>
+            </tr>
+            <tr>
+                <td onclick="insert('7')">7</td>
+                <td onclick="insert('8')">8</td>
+                <td onclick="insert('9')">9</td>
+                <td class="operator" onclick="insert('*')"><i class="fa-solid fa-xmark"></i></td>
+            </tr>
+            <tr>
+                <td onclick="insert('4')">4</td>
+                <td onclick="insert('5')">5</td>
+                <td onclick="insert('6')">6</td>
+                <td class="operator" onclick="insert('-')"><i class="fa-solid fa-minus"></i></td>
+            </tr>
+            <tr>
+                <td onclick="insert('1')">1</td>
+                <td onclick="insert('2')">2</td>
+                <td onclick="insert('3')">3</td>
+                <td class="operator" onclick="insert('+')"><i class="fa-solid fa-plus"></i></td>
+            </tr>
+            <tr>
+                <td onclick="insert('0')">0</td>
+                <td id="point" onclick="insert('.')">.</td>
+                <td colspan="3" class="operator" ><i class="fa-solid fa-equals" id="equal" onclick="calc()"></i></td>
+            </tr>
+        </table>
+
+    </div>
+    <script src="https://kit.fontawesome.com/c59033b868.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
